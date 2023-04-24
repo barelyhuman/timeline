@@ -6,9 +6,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "node index.js",
     "fix": "yarn prettier --write .",
-    "prerender": "wget -P .site -nv -nH -r -E localhost:3000"
+    "render": "./scripts/pre-render.sh",
+    "start": "node index.js"
   },
   "prettier": "@barelyhuman/prettier-config",
   "dependencies": {
