@@ -349,16 +349,16 @@ function TimelineItem({ name, time, children }) {
             {
               ref: (node) => {
                 const box = node.parentNode.nextSibling.getBoundingClientRect();
-                const toAdd = node.getBoundingClientRect().y - box.y;
+                const toAdd = Math.abs(node.getBoundingClientRect().y - box.y);
                 node.style.height = toAdd + "px";
               },
-              class: "h-4 w-[1px] bg-zinc-200"
+              class: "h-4 w-[1px] bg-zinc-100"
             }
           ),
-          /* @__PURE__ */ o2("div", { class: "relative h-4 w-4 flex-none rounded-full bg-black drop-shadow-2xl", children: /* @__PURE__ */ o2("p", { class: "text-zinc-400 absolute right-7 top-[50%] translate-y-[-50%]", children: time }) }),
-          /* @__PURE__ */ o2("div", { class: "h-full flex-1 w-[1px] bg-zinc-200" })
+          /* @__PURE__ */ o2("div", { class: "relative h-4 w-4 flex-none rounded-full bg-zinc-700 drop-shadow-xl", children: /* @__PURE__ */ o2("p", { class: "text-zinc-400 absolute text-xs right-7 top-[50%] translate-y-[-50%]", children: time }) }),
+          /* @__PURE__ */ o2("div", { class: "h-full flex-1 w-[1px] bg-zinc-100" })
         ] }),
-        /* @__PURE__ */ o2("div", { class: "ml-10 py-6 flex flex-col w-full", children: [
+        /* @__PURE__ */ o2("div", { class: "ml-10  flex flex-col w-full", children: [
           /* @__PURE__ */ o2("div", { children: /* @__PURE__ */ o2("h1", { class: "font-bold text-zinc-700", children: name }) }),
           /* @__PURE__ */ o2("div", { class: "w-full", children })
         ] })
@@ -372,7 +372,7 @@ var init_TimelineItem_island = __esm({
   }
 });
 
-// .prev/.generated/TimelineItem.island.client-is2091386929.js
+// .prev/.generated/TimelineItem.island.client-is1133157928.js
 init_preact_module();
 var restoreTree = (type, props = {}) => {
   if (typeof props.children === "object") {
